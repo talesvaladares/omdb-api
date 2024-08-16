@@ -21,7 +21,7 @@ type SearchResult struct {
 }
 
 func Search(apiKey, title string) (Result, error) {
-	var urlValues url.Values
+	urlValues := url.Values{}
 
 	urlValues.Set("apikey", apiKey)
 	urlValues.Set("s", title)
